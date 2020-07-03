@@ -16,7 +16,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages={"net.kzn.shoppingbackend.dto"})
+@ComponentScan(basePackages={"net.sam.milkycartbackend.dto"})
 @EnableTransactionManagement
 @PropertySource("classpath:connection.properties")
 public class HibernateConfig {
@@ -57,7 +57,7 @@ public class HibernateConfig {
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 		
 		builder.addProperties(getHibernateProperties());
-		builder.scanPackages("net.kzn.shoppingbackend.dto");
+		builder.scanPackages("net.sam.milkycartbackend.dto");
 		
 		return builder.buildSessionFactory();
 		

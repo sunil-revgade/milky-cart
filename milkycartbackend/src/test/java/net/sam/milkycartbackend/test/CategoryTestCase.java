@@ -24,26 +24,25 @@ public class CategoryTestCase {
 	@BeforeClass
 	public static void init() {
 		context = new AnnotationConfigApplicationContext();
-		context.scan("net.kzn.shoppingbackend");
+		context.scan("net.sam.milkycartbackend");
 		context.refresh();
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
 	}
 	
 	
-/*	@Test
+	@Test
 	public void testAddCategory() {
 		
 		category = new Category();
 		
-		category.setName("Laptop");
-		category.setDescription("This is some description for laptop!");
+		category.setName("Fruits");
+		category.setDescription("This is some description for Fruits!");
 		category.setImageURL("CAT_105.png");
 		
 		assertEquals("Successfully added a category inside the table!",true,categoryDAO.add(category));
 		
 		
 	}
-	*/
 	
 /*	@Test
 	public void testGetCategory() {
@@ -88,7 +87,7 @@ public class CategoryTestCase {
 		
 	}
 	
-*/
+
 	
 	@Test
 	public void testCRUDCategory() {
@@ -129,6 +128,6 @@ public class CategoryTestCase {
 				
 		
 	}
-	
+	*/
 	
 }
